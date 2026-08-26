@@ -1,0 +1,73 @@
+generated: '2026-08-25'
+method: searched
+source: >-
+  Registry searches run 2026-08-25 against npm (registry.npmjs.org search + package
+  metadata), PyPI (pypi.org/pypi/menusifu/json), RubyGems, Packagist, crates.io and
+  NuGet, plus a GitHub code/repo search. MenuSifu publishes NO API client SDK in any
+  registry, because it publishes no API. The two packages below are internal engineering
+  artifacts that MenuSifu staff pushed to public npm; neither is a client library for a
+  MenuSifu API and neither is documented anywhere on menusifu.com.
+sdk_count: 0
+package_count: 2
+note: >-
+  sdk_count is 0 deliberately. No `SDKs` pointer is wired into apis.yml: an API client
+  SDK would assert a public API that MenuSifu does not publish. PyPI, RubyGems, crates.io
+  and NuGet returned zero MenuSifu-attributed packages; Packagist returned only unrelated
+  "menu" matches.
+packages:
+- name: pos-ui-react-cds
+  registry: npm
+  url: https://www.npmjs.com/package/pos-ui-react-cds
+  version: 1.0.35
+  published: '2026-01-21'
+  official: true
+  kind: ui-component-library
+  description: A React component library with theme support.
+  repository: https://bitbucket.org/menusifu/pos-ui-react
+  official_basis: >-
+    The package's own repository/homepage metadata points at bitbucket.org/menusifu/pos-ui-react,
+    a repository under MenuSifu's own Bitbucket workspace.
+  note: >-
+    Internal design-system components for the MenuSifu POS front end, published publicly to
+    npm as a build dependency. Not an API SDK, not referenced from any MenuSifu documentation,
+    and carries no README on the registry page describing public use.
+- name: ion2-calendar-menusifu
+  registry: npm
+  url: https://www.npmjs.com/package/ion2-calendar-menusifu
+  version: 1.0.13
+  published: '2017-07-10'
+  official: true
+  kind: ui-component-fork
+  description: A date picker for ionic2, @copyright menusifu.
+  repository: https://github.com/wutongy/ion2-calendar
+  official_basis: >-
+    Published by a MenuSifu employee — the npm `author` field is "Tongyun Wu tywu@menusifu.com" —
+    and the description carries "@copyright menusifu".
+  note: >-
+    A MenuSifu fork of the third-party ion2-calendar Ionic date picker. Abandoned: the latest
+    release is 1.0.13 from 2017-07-10, more than nine years stale. Not an API SDK.
+registries_searched:
+- registry: npm
+  query: menusifu
+  result: 4 matches; 2 MenuSifu-attributed (recorded above), 2 unrelated
+- registry: pypi
+  query: menusifu
+  result: HTTP 404 — no package
+- registry: rubygems
+  query: menusifu
+  result: empty result set
+- registry: packagist
+  query: menusifu
+  result: no MenuSifu-attributed packages
+- registry: crates.io
+  query: menusifu
+  result: 0 crates
+- registry: nuget
+  query: menusifu
+  result: 0 hits
+- registry: github
+  query: menusifu
+  result: >-
+    6 repositories, none owned by a MenuSifu organization — the org github.com/menusifu
+    returns HTTP 404. All hits are personal accounts (a code challenge, a hardware list,
+    an IVR experiment, a personal "MenusifuAgents" project).

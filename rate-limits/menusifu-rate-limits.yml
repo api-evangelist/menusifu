@@ -1,0 +1,27 @@
+generated: '2026-08-25'
+method: searched
+source: >-
+  Searched every public MenuSifu surface for published API rate limits on 2026-08-25 —
+  the 286-URL sitemap at https://www.menusifu.com/sitemap.xml (which contains no
+  developer, API, integration or reference page), the pricing page, and the production
+  host api.menusifu.com.
+limit_count: 0
+headers_documented: false
+headers_observed: []
+status_on_exhaustion: null
+note: >-
+  MenuSifu publishes no rate limits because it publishes no API. There is no developer
+  portal, no API reference and no machine-readable contract to attach a limit to. The
+  production host api.menusifu.com answers every anonymous request with HTTP 401 and
+  returns no RateLimit-*, X-RateLimit-* or Retry-After header on that response, so no
+  runtime rate-limit signal could be observed either. This is an honest zero, not an
+  unchecked field.
+limits: []
+evidence:
+- url: https://api.menusifu.com/openapi.json
+  status: 401
+  observed: >-
+    Response headers carried no RateLimit-*, X-RateLimit-* or Retry-After field.
+- url: https://www.menusifu.com/pricing
+  status: 200
+  observed: No API quota, call allowance or limit is stated on any tier.

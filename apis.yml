@@ -1,7 +1,16 @@
 aid: menusifu
-name: Menusifu
-description: 'Menusifu is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: MenuSifu
+description: 'MenuSifu is a U.S. restaurant technology company founded in 2014 that builds an all-in-one
+  point-of-sale and restaurant operations platform, used by more than 15,000 active restaurants and supported
+  from offices in New York, Los Angeles, Houston, Orlando, Silicon Valley and Chicago. The platform spans
+  POS terminals and handhelds, self-service kiosks, kitchen display and kitchen-automation systems, electronic
+  menus and order-status screens, online ordering, scan-to-order, waitlist and reservations, loyalty,
+  coupons and SMS marketing, and analytics and reporting, with direct order integrations into DoorDash,
+  Uber Eats, Grubhub, Fantuan and HungryPanda. It is sold alongside an ecosystem of sibling brands — USEZPAY
+  (payment processing), MealKeyway (marketing), EZ Capital (restaurant financing), WeFood and ShowTop.
+  MenuSifu markets no public developer program: it publishes no API reference, no OpenAPI or other machine-readable
+  contract, and no SDKs, and its production host api.menusifu.com rejects every anonymous request.'
+image: https://cdn.prod.website-files.com/69366fbc0f086e839c80b396/69787c18dfed54b6493f243e_menusifu.webp
 url: https://raw.githubusercontent.com/api-evangelist/menusifu/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,15 @@ created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Point of Sale
+- Restaurants
+- Restaurant Technology
+- Hospitality
+- Payments
+- Online Ordering
+- Loyalty
+- Kitchen Display Systems
+- Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,55 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/menusifu-domain-security.yml
+- type: Packages
+  url: packages/menusifu-packages.yml
+- type: Plans
+  url: plans/menusifu-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/menusifu-rate-limits.yml
+- type: LLMsTxt
+  url: llms/menusifu-llms.txt
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.menusifu.com/
+- type: Pricing
+  url: https://www.menusifu.com/pricing
+- type: Blog
+  url: https://www.menusifu.com/blog
+- type: PrivacyPolicy
+  url: https://www.menusifu.com/privacy-policy
+- type: TermsOfService
+  url: https://www.menusifu.com/master-services-agreement
+- type: SignUp
+  url: https://www.menusifu.com/restaurant-pos-demo
+- type: CaseStudies
+  url: https://www.menusifu.com/customer-stories
+- type: Careers
+  url: https://www.menusifu.com/career
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'MenuSifu ships restaurant POS software only as an end-user product: its 286-URL sitemap contains
+    no developer, API or integration-reference page, and its production backend api.menusifu.com answers
+    every anonymous path — /openapi.json, /swagger.json, /v2/api-docs, /graphql and every /.well-known/*
+    — with HTTP 401 "Full authentication is required to access this resource".'
+  evidence:
+  - url: https://api.menusifu.com/openapi.json
+    status: 401
+  - url: https://api.menusifu.com/v2/api-docs
+    status: 401
+  - url: https://api.menusifu.com/graphql
+    status: 401
+  - url: https://www.menusifu.com/llms.txt
+    status: 404
+  - url: https://www.menusifu.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.menusifu.com/sitemap.xml
+    status: 200
+  checked: '2026-08-25'

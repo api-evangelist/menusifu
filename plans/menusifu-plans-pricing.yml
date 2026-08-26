@@ -1,0 +1,89 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.menusifu.com/pricing
+plan_count: 4
+currency: USD
+billing_period: monthly
+pricing_model: contact-sales
+note: >-
+  MenuSifu names four software tiers on its public pricing page but publishes a price for
+  only one of them. Three of four tiers carry no number: the page routes to a demo-booking
+  form instead. Payment processing is sold separately through USEZPAY, MenuSifu's own
+  processor, on an "Interchange Plus, no third-party processor markup" basis with rates
+  quoted per merchant. Hardware pricing and installation/menu-programming fees are not
+  published. There is no API or developer plan of any kind — these are end-user restaurant
+  software packages, not API tiers, so there is no published quota, overage or rate limit
+  attached to any of them.
+plans:
+- name: Pay-As-You-Grow
+  price: 0
+  price_published: true
+  currency: USD
+  period: month
+  audience: New restaurants
+  includes:
+  - Core POS system for reliable daily operations
+  - Essential toolkit for orders, payments and reporting
+  - No-fee software plan
+  quota: null
+  overage: null
+  limits: null
+  note: >-
+    "$0/mo" software fee. Revenue is earned on payment processing through USEZPAY rather
+    than on the software subscription; the processing rate is not published.
+- name: Basic
+  price: null
+  price_published: false
+  currency: USD
+  period: month
+  audience: Small restaurants
+  includes:
+  - Full-service POS
+  - Data-driven reports
+  - Scan-to-order
+  - Self-service kiosks
+  quota: null
+  overage: null
+  limits: null
+  note: Price not published; the page routes to a demo/contact form.
+- name: Pro
+  price: null
+  price_published: false
+  currency: USD
+  period: month
+  audience: Growing restaurants
+  most_popular: true
+  includes:
+  - Everything in Basic
+  - Third-party delivery integration
+  - Tablet ordering
+  - Waitlist and reservations
+  quota: null
+  overage: null
+  limits: null
+  note: Marked "Most Popular" on the page. Price not published.
+- name: Premium
+  price: null
+  price_published: false
+  currency: USD
+  period: month
+  audience: Chain restaurants
+  includes:
+  - Full ecosystem access
+  - Advanced kitchen display system
+  - Custom eMenu Pro
+  - Multi-store gift cards
+  - Split-funding for groups and franchises
+  quota: null
+  overage: null
+  limits: null
+  note: Price not published; enterprise/chain tier quoted by sales.
+add_ons:
+- name: USEZPAY payment processing
+  url: https://www.menusifu.com/ecosystem/usezpay
+  pricing: >-
+    "Interchange Plus model with no third-party processor markup" — the effective rate is
+    quoted per merchant and is not published.
+evidence:
+- url: https://www.menusifu.com/pricing
+  status: 200

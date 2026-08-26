@@ -1,0 +1,62 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of every MenuSifu host known to this profile, run
+  2026-08-25. No /.well-known/ document was served by any host — every path either 404s
+  (www.menusifu.com, a Webflow site that answers "Invalid .well-known request") or is
+  rejected by Spring Security with HTTP 401 (api.menusifu.com). No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml, because nothing was served.
+hosts:
+- host: www.menusifu.com
+  note: >-
+    Marketing site (Webflow). Every /.well-known/* path returns HTTP 404 with the body
+    "<p>Invalid .well-known request</p>".
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.menusifu.com
+  note: >-
+    Production API host. Every path — including every /.well-known/ path — returns HTTP 401
+    with the JSON body {"successful":false,"code":999,"msg":"Full authentication is required
+    to access this resource"}. This is a blanket authentication filter, not a served document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 401
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+    file: null
+  - path: /.well-known/api-catalog
+    status: 401
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 401
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 401
+    file: null
+  - path: /.well-known/agent.json
+    status: 401
+    file: null

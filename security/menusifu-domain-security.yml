@@ -1,0 +1,27 @@
+generated: '2026-08-25'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts; api.menusifu.com probed directly 2026-08-25
+hosts:
+- host: www.menusifu.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  3 11:29:15 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.menusifu.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Jan 18 23:59:59 2027 GMT
+  cert_issuer: Amazon RSA 2048 M04
+  hsts: false
+  hsts_max_age: null
+  note: 'Production API host, added by hand — it is not named in apis.yml apis[] because MenuSifu publishes
+    no API entry. Probed 2026-08-25: HTTP/2, no Strict-Transport-Security header, x-content-type-options
+    nosniff and x-frame-options DENY present; highest TLS version negotiated by openssl s_client was TLSv1.2.'
+domains:
+- domain: menusifu.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
