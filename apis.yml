@@ -10,6 +10,17 @@ description: 'MenuSifu is a U.S. restaurant technology company founded in 2014 t
   (payment processing), MealKeyway (marketing), EZ Capital (restaurant financing), WeFood and ShowTop.
   MenuSifu markets no public developer program: it publishes no API reference, no OpenAPI or other machine-readable
   contract, and no SDKs, and its production host api.menusifu.com rejects every anonymous request.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/69366fbc0f086e839c80b396/69787c18dfed54b6493f243e_menusifu.webp
 url: https://raw.githubusercontent.com/api-evangelist/menusifu/refs/heads/main/apis.yml
 x-type: company
