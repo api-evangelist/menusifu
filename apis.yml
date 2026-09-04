@@ -21,6 +21,20 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: freemium
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium · Requires approval
+  confidence: medium
+  source:
+  - plans
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/69366fbc0f086e839c80b396/69787c18dfed54b6493f243e_menusifu.webp
 url: https://raw.githubusercontent.com/api-evangelist/menusifu/refs/heads/main/apis.yml
 x-type: company
